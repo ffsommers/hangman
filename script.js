@@ -222,8 +222,7 @@ function getWords(settings) {
   // OnClick Function
    check = function () {
     list.onclick = function () {
-      	var guess = (this.innerHTML);
-			}
+      var guess = (this.innerHTML);
       this.setAttribute("class", "active");
       this.onclick = null;
       for (var i = 0; i < word.length; i++) {
