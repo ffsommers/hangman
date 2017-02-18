@@ -1,0 +1,12 @@
+body{
+	background-image: url('bg1.jpg');
+}
+
+#formContainer{
+ width: 400px;
+ border:solid yellow 4px;
+ border-radius: 4px;
+ padding: 10px;
+ margin: 0 auto;
+ background-color: white;
+}
