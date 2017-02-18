@@ -41,8 +41,8 @@ function startSpeech() {
   		.join("")
 
   		if (transcript.includes('letter')){
-				var letter = transcript.pop()
-				console.log(letter);
+				// var letter = transcript.pop()
+				console.log(typeof transcript);
 				// check()
   		}
 			// prints everything thats said to console.
