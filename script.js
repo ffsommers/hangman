@@ -248,7 +248,7 @@ function getWords(settings) {
 	checkBySpeech = function (input) {
 
  		var guess = (input);
- 		guess.setAttribute("class", "active");
+ 		
  		for (var i = 0; i < word.length; i++) {
  			if (word[i] === guess) {
  				guesses[i].innerHTML = guess;
