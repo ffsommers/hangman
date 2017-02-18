@@ -261,7 +261,7 @@ function getWords(settings) {
  			comments();
  			animate();
  			$("#wordsGuessed").show();
- 			$("#wordsGuessed").find("ul").append(guess);
+ 			$("#wordsGuessed").find("ul").append("<li id='letter' class='active'>"+ guess +"</li>");
  		} else {
  			comments();
 
