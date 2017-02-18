@@ -41,7 +41,9 @@ function startSpeech() {
   		.join("")
 
   		if (transcript.includes('letter')){
-  			console.log("TITTIES");
+				var letter = transcript.pop().toLowerCase();
+				console.log("letter");
+				// check()
   		}
 			// prints everything thats said to console.
 		 console.log(transcript);
@@ -219,10 +221,12 @@ function getWords(settings) {
 
 
   // OnClick Function
-   check = function () {
+   check = function (input) {
     list.onclick = function () {
 			console.log("checking");
-      var guess = (this.innerHTML);
+			if (input !undefined){
+      	var guess = (this.innerHTML);
+			}
       this.setAttribute("class", "active");
       this.onclick = null;
       for (var i = 0; i < word.length; i++) {
