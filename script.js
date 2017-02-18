@@ -221,9 +221,9 @@ function getWords(settings) {
 
   // OnClick Function
    check = function (input) {
-    list.onclick = function () {
+    list.onclick = function (input) {
 			console.log("checking");
-			if (input != undefined){
+			if (input === undefined){
       	var guess = (this.innerHTML);
 			}else{
 				var guess = input;
