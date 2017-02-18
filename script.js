@@ -248,7 +248,7 @@ function getWords(settings) {
 	checkBySpeech = function (input) {
 
  		var guess = (input);
- 		
+
  		for (var i = 0; i < word.length; i++) {
  			if (word[i] === guess) {
  				guesses[i].innerHTML = guess;
@@ -261,7 +261,7 @@ function getWords(settings) {
  			comments();
  			animate();
  			$("#wordsGuessed").show();
- 			$("#wordsGuessed").find("ul").append(this);
+ 			$("#wordsGuessed").find("ul").append(guess);
  		} else {
  			comments();
 
