@@ -40,7 +40,6 @@ function startSpeech() {
   		.map(result => result.transcript)
   		.join("")
 
-  		p.textContent = transcript;
   		if (transcript.includes('letter')){
   			console.log(transcript);
   		}
