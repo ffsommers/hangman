@@ -42,7 +42,7 @@ function startSpeech() {
 
   		if (transcript.includes('letter')){
 				var letter = transcript.slice(-1)
-				check(letter)
+				// check(letter)
   		}
 			// prints everything thats said to console.
 		 console.log(transcript);
@@ -220,13 +220,9 @@ function getWords(settings) {
 
 
   // OnClick Function
-   check = function (input) {
-    list.onclick = function (input) {
-			console.log("checking");
-			if (input === undefined){
+   check = function () {
+    list.onclick = function () {
       	var guess = (this.innerHTML);
-			}else{
-				var guess = input;
 			}
       this.setAttribute("class", "active");
       this.onclick = null;
