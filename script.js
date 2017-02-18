@@ -12,7 +12,7 @@ $(document).ready(function(){
     	settings.difficulty = gameDifficulty;
     	settings.rounds = gameRounds;
      	getWords(settings);
- 		
+ 		startSpeech();
      	// gameInit(words);
  	});
 	(function wait() {
@@ -28,6 +28,27 @@ $(document).ready(function(){
 	// })
 
 });
+// speech recognition
+function startSpeech() {
+	var recognition = new webkitSpeechRecognition();
+	recognition.onresult = function(event) { 
+  		console.log(event) 
+  	}
+  recognition.addEventListener('result', e => {
+  	const transcript = Array.from(e.results)
+  		.map(result => result[0])
+  		.map(result => result.transcript)
+  		.join("")
+
+  		p.textContent = transcript;
+  		if (transcript.includes('letter')){
+  			console.log(transcript);
+  		}
+  		
+  });
+  recognition.addEventListener('end', recognition.start);
+  recognition.start();	
+}
 
 var words= [];
 
