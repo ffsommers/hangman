@@ -43,7 +43,8 @@ function startSpeech() {
   		if (transcript.includes('letter')){
   			console.log("TITTIES");
   		}
-     console.log(transcript);
+			// prints everything thats said to console.
+		 console.log(transcript);
   });
   recognition.addEventListener('end', recognition.start);
   recognition.start();
@@ -76,10 +77,10 @@ function getWords(settings) {
 
 
   var word ;              // Selected word
-  var guess ;             // Geuss
-  var geusses = [ ];      // Stored geusses
+  var guess ;             // Guess
+  var guesses = [ ];      // Stored guesses
   var lives ;             // Lives
-  var counter ;           // Count correct geusses
+  var counter ;           // Count correct guesses
   var space;              // Number of spaces in word '-'
 
   // Get elements
@@ -120,7 +121,7 @@ function getWords(settings) {
         guess.innerHTML = "_";
       }
 
-      geusses.push(guess);
+      guesses.push(guess);
       wordHolder.appendChild(correct);
       correct.appendChild(guess);
     }
@@ -139,8 +140,8 @@ function getWords(settings) {
     }
 
 
-    for (var i = 0; i < geusses.length; i++) {
-      if (counter + space === geusses.length) {
+    for (var i = 0; i < guesses.length; i++) {
+      if (counter + space === guesses.length) {
         showLives.innerHTML = "You Win!";
       }
     }
@@ -220,16 +221,16 @@ function getWords(settings) {
   // OnClick Function
    check = function () {
     list.onclick = function () {
-      var geuss = (this.innerHTML);
+      var guess = (this.innerHTML);
       this.setAttribute("class", "active");
       this.onclick = null;
       for (var i = 0; i < word.length; i++) {
-        if (word[i] === geuss) {
-          geusses[i].innerHTML = geuss;
+        if (word[i] === guess) {
+          guesses[i].innerHTML = guess;
           counter += 1;
         }
       }
-      var j = (word.indexOf(geuss));
+      var j = (word.indexOf(guess));
       if (j === -1) {
         lives -= 1;
         comments();
@@ -250,7 +251,7 @@ function getWords(settings) {
     word = wordArray.pop();
     buttons();
 
-    geusses = [ ];
+    guesses = [ ];
     lives = 6;
     counter = 0;
     space = 0;
