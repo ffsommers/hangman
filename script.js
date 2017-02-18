@@ -132,8 +132,8 @@ function getWords(settings) {
     myStickman = document.getElementById("stickman");
     context = myStickman.getContext('2d');
     context.beginPath();
-    context.strokeStyle = "#fff";
-    context.lineWidth = 2;
+    context.strokeStyle = '#ea5b3f';
+    context.lineWidth = 4;
   };
   
     head = function(){
