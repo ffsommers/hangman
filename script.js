@@ -43,7 +43,7 @@ function startSpeech() {
   		if (transcript.includes('letter')){
   			console.log("TITTIES");
   		}
-
+     console.log(transcript);
   });
   recognition.addEventListener('end', recognition.start);
   recognition.start();
