@@ -225,6 +225,8 @@ function getWords(settings) {
 			console.log("checking");
 			if (input != undefined){
       	var guess = (this.innerHTML);
+			}else{
+				var guess = input;
 			}
       this.setAttribute("class", "active");
       this.onclick = null;
