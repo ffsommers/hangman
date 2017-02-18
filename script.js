@@ -214,8 +214,10 @@ function getWords(settings) {
         lives -= 1;
         comments();
         animate();
+        $("#wordsGuessed").find("ul").append(this);
       } else {
         comments();
+
       }
     }
   }
