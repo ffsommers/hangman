@@ -220,6 +220,7 @@ function getWords(settings) {
 
   // OnClick Function
    check = function () {
+		 console.log("checking");
     list.onclick = function () {
       var guess = (this.innerHTML);
       this.setAttribute("class", "active");
