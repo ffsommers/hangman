@@ -3,7 +3,7 @@ $(document).ready(function(){
 		difficulty: 1,
 		rounds: 1
 	};
-    
+    $("#wordsGuessed").css("display", "none");
  	$("#reset").css("display", "none");
 	$("#play").on("click", function(){
     	$("#formContainer").css("display", "none");
@@ -214,6 +214,7 @@ function getWords(settings) {
         lives -= 1;
         comments();
         animate();
+        $("#wordsGuessed").show();
         $("#wordsGuessed").find("ul").append(this);
       } else {
         comments();
