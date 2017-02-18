@@ -4,22 +4,29 @@ $(document).ready(function(){
 		rounds: 1
 	};
     
-  $("#reset").css("display", "none");
-	console.log("ready");
+ 	$("#reset").css("display", "none");
 	$("#play").on("click", function(){
     	$("#formContainer").css("display", "none");
     	var gameDifficulty = $("#difficulty option:selected").val();
     	var gameRounds = $("#rounds option:selected").val();
     	settings.difficulty = gameDifficulty;
     	settings.rounds = gameRounds;
-     	console.log(settings);
      	getWords(settings);
  		
      	// gameInit(words);
-	});
-	$("#start").on("click", function() {
-		gameInit(words);
-	})
+ 	});
+	(function wait() {
+    	if (words.length > 0 ) {
+       		gameInit(words);
+    	} else {
+        	setTimeout( wait, 500 );
+    	}
+	})();
+
+	// $("#start").on("click", function() {
+	// 	gameInit(words);
+	// })
+
 });
 
 var words= [];
