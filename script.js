@@ -42,7 +42,7 @@ function startSpeech() {
 
   		if (transcript.includes('letter')){
 				var letter = transcript.slice(-1)
-				// check(letter)
+				checkBySpeech(letter)
   		}
 			// prints everything thats said to console.
 		 console.log(transcript);
@@ -244,6 +244,30 @@ function getWords(settings) {
       }
     }
   }
+
+	checkBySpeech = function (input) {
+
+ 		var guess = (input);
+ 		guess.setAttribute("class", "active");
+ 		for (var i = 0; i < word.length; i++) {
+ 			if (word[i] === guess) {
+ 				guesses[i].innerHTML = guess;
+ 				counter += 1;
+ 			}
+ 		}
+ 		var j = (word.indexOf(guess));
+ 		if (j === -1) {
+ 			lives -= 1;
+ 			comments();
+ 			animate();
+ 			$("#wordsGuessed").show();
+ 			$("#wordsGuessed").find("ul").append(this);
+ 		} else {
+ 			comments();
+
+ 		}
+
+ }
 
 
   // Play
