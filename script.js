@@ -109,7 +109,7 @@ function getWords(settings) {
   // Show lives
    comments = function () {
    	// all games played show stats
-    showLives.innerHTML = "You have " + lives + " lives";
+    showLives.innerHTML = "You have " + lives + " incorrect guesses left.";
     if (lives < 1 && words.length === 0) {	
       document.body.innerHTML = '';
     }
