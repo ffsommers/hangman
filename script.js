@@ -41,7 +41,7 @@ function startSpeech() {
   		.join("")
 
   		if (transcript.includes('letter')){
-  			console.log(transcript);
+  			console.log("TITTIES");
   		}
 
   });
